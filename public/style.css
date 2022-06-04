@@ -1,0 +1,6 @@
+body {
+	
+}
+nav ul li.active, .tabs .tab a.active {
+	border-bottom: solid 2px white;
+}

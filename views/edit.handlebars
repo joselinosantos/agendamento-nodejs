@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="row">
+        <div class="col s6 offset-s3">
+            <form action="/edit" class="col s12" method="post">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Editar dados do agendamento</span>
+                        <h1>{{agendamento.nome}}</h1>
+
+                        <div class="row">
+                            <!-- Input nome -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input type="text" class="validate" placeholder="Nome" id="nome" name="nome" required maxlength="100" value="{{agendamento.nome}}"/>
+                                    <label for="nome">Nome</label>
+                                </div>
+                            </div>
+
+                            <!-- Input telefone -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">phone</i>
+                                    <input type="number" class="validate" name="telefone" id="telefone" maxlength="11" value="{{agendamento.telefone}}">
+                                    <label for="telefone">Telefone com DDD Ex: 6199338866</label>
+                                </div>
+                            </div>
+
+                            <!-- Input horário -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="horario" name="horario">
+                                        <option value="{{dataValues.horario}}">{{agendamento.horario}}</option>
+                                        <option value="">Horário</option>
+                                        <option value="8">8h</option>
+                                        <option value="9">9h</option>
+                                        <option value="10">10h</option>
+                                        <option value="11">11h</option>
+                                        <option value="13">13h</option>
+                                        <option value="14">14h</option>
+                                        <option value="15">15h</option>
+                                        <option value="16">16h</option>
+                                        <option value="17">17h</option>
+                                    </select>
+                                    <label for="horario">Horário</label>
+                                </div>
+                            </div>
+
+                            <!-- Input serviço -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select name="servico">
+                                        <option value="{{agendamento.servico}}">{{agendamento.servico}}</option>
+                                        <option value="0">Serviço</option>
+                                        <option value="1">Consulta</option>
+                                        <option value="2">Exame</option>
+                                        <option value="3">Vacina</option>
+                                        <option value="4">Outros</option>
+                                    </select>
+                                     <label for="servico">Serviço</label>
+                                </div>
+                            </div>
+
+                            <!-- Descrição do problema -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">mode_edit</i>
+                                    <textarea name="descricao" id="descricao" class="materialize-textarea" required>   {{agendamento.descricao}}</textarea>
+                                    <label for="descricao">Alterar descrição</label>
+                                </div>
+                            </div>
+
+                            <input type="hidden" name="id" value="{{agendamento._id}}">
+                        </div>
+
+                        <div class="card-action">
+                            <a class="btn waves-effect waves-light grey" href="/">Cancelar</a>
+                            <button class="btn waves-effect waves-light red accent-4">Editar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
