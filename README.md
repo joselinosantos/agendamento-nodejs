@@ -1,6 +1,6 @@
 # Agendamento Nodejs
 
-[Agendamento](https://github.com/joselinosantosti/agendamento-nodejs/blob/main/public/agendamento.png)
+![Agendamento](https://github.com/joselinosantosti/agendamento-nodejs/blob/main/public/agendamento.png)
 
 # Getting start
 1. Install NodeJS, MySQL and MongoDB in your Operational System
